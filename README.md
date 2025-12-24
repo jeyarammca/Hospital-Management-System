@@ -15,7 +15,7 @@ A comprehensive web-based application for managing hospital outpatient (OP) reco
 </div>
 
 <div align="center">
-  <img src="assets/docs/reports.png" alt="Reports" width="800" height="200">
+  <img src="assets/docs/reports.png" alt="Reports" width="800" height="600">
   <p><em>Reports & Printing</em></p>
 </div>
 
