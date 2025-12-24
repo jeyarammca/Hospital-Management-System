@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --sidebar-bg: #1e1e2d;
+    --sidebar-text: #a2a3b7;
+    --sidebar-text-active: #ffffff;
+    --body-bg: #f5f8fa;
+    --card-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+}
+
+body {
+    background-color: var(--body-bg);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding-top: 20px;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 25px 20px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link {
+    color: var(--sidebar-text);
+    padding: 12px 25px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: var(--sidebar-text-active);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* Card Styles */
+.card-custom {
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    background: #fff;
+    transition: transform 0.2s;
+}
+
+.card-custom:hover {
+    transform: translateY(-2px);
+}
+
+.stat-card-title {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.stat-card-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Navbar */
+.top-navbar {
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 30px;
+    margin-left: 250px;
+    /* Offset for sidebar */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media print {
+
+    .sidebar,
+    .top-navbar,
+    .d-print-none {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        padding: 0 !important;
+    }
+
+    body {
+        background-color: #fff;
+    }
+}
